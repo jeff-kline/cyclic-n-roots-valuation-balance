@@ -11,8 +11,9 @@ authorization. The Zenodo portal belongs to the author.
 
 The imported draft's source workspace is read-only. Material mathematical
 changes reopen the affected audit. Never infer global novelty from a bounded
-search. Do not claim finiteness for any composite order, a value of mu at the
-symmetric endpoints, a bound on the number of coefficient conditions, or the
-existence of branches at the order-26 endpoints.
+search. Do not claim finiteness for any composite order, a bound on the
+number of coefficient conditions, priority for the valuation-multiset theorem,
+or anything about branches at the order-26 points beyond the prescribed
+directions excluded by mu != 0.
 Use an isolated Python environment; never install into a system interpreter.
 Commit identity: Jeff Kline <2778446+jeff-kline@users.noreply.github.com>.

@@ -1,0 +1,18 @@
+S = 60;
+read("mu_balls.gp");
+t0 = getabstime();
+print("=== lift z- : x = 9-4t, y = 8-3t, gauge s4=s20=0 ===");
+Hm = hensel([9,-4],[8,-3]);
+mum = mu_at(Hm[1], Hm[2], [4,20]);
+print("=== lift z+ again, gauge s20=s25=0 ===");
+Hp = hensel([9,4],[8,3]);
+mup25 = mu_at(Hp[1], Hp[2], [20,25]);
+print("=== lift z+, gauge s6=s20=0 and w -> w + 1*u ===");
+WSHIFT = 1;
+mup6 = mu_at(Hp[1], Hp[2], [6,20]);
+WSHIFT = 0;
+print("=== lift z-, gauge s20=s25=0 ===");
+mum25 = mu_at(Hm[1], Hm[2], [20,25]);
+d1 = bsub(mup25, mup6); print("difference of the two z+ balls: v(center)=", d1[4], " N=", d1[3]);
+d2 = bsub(mum, mum25); print("difference of the two z- balls: v(center)=", d2[4], " N=", d2[3]);
+print("total ms: ", getabstime()-t0);

@@ -17,11 +17,18 @@ From the repository root:
 
 ```sh
 make verify PYTHON="$HOME/.venvs/claude/bin/python"
+make verify-mu PYTHON="$HOME/.venvs/claude/bin/python"
 make paper PYTHON="$HOME/.venvs/claude/bin/python" PDFLATEX=/opt/local/bin/pdflatex
 ```
 
 `make verify` runs `scripts/check_certificates.py` and requires its output to
 equal `evidence/certificate-result.json` byte for byte.
+
+`make verify-mu` runs `scripts/certify_mu.py` (with `scripts/local_field.py`;
+about 48 CPU seconds, self-limited to 180) and `scripts/compare_mu.py`, which
+requires the fresh `build/mu-certificate.json` to equal
+`evidence/mu-certificate.json` except for CPU time, Python version and the
+hash of the checker it reads.
 
 The builder (`scripts/build_paper.py`, adapted from the author's predecessor
 repository) uses two clean temporary directories, running pdfLaTeX twice in

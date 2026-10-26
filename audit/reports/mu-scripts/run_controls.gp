@@ -1,0 +1,11 @@
+S = 60;
+read("mu_balls.gp");
+t0 = getabstime();
+Hp = hensel([9,4],[8,3]);
+trunc(X, k) = [liftall(X[1]*Mod(1,13^k)), liftall(X[2]*Mod(1,13^k))];
+print("=== control A: exact non-critical point z = residues (9+4t, 8+3t), treated as exact (N0 = INF) ===");
+N0OVR = INF; muA = mu_at([9,4],[8,3],[4,20]);
+print("=== control B: lift truncated to O(13^k), N0 = 12k (precision ladder) ===");
+foreach([8,10,11,12,15], k, N0OVR = 12*k; print("--- k = ", k, " (N0 = ", 12*k, ")"); iferr(my(m = mu_at(trunc(Hp[1],k), trunc(Hp[2],k), [4,20])), E, print("  ERROR: ", errname(E), " ", component(E,1))));
+N0OVR = 0;
+print("total ms: ", getabstime()-t0);

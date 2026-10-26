@@ -23,10 +23,14 @@ hits".
   compactification of the arrangement of the $2n$ forms $x_i$ and $(Fx)_k$
   with weights $\pm1$, a Laurent solution meets the divisor of each flat
   $\lbrace \ell : \nu(\ell)>c\rbrace$, and the balance condition there is
-  exactly the equality of the counts at threshold $c$. A process-separated examiner judged this sketch sound but did
-  not check it against the source. The paper says Theorem 2.1 is expected to
-  follow from this residue principle, gives a direct proof, and claims no
-  priority for it.
+  exactly the equality of the counts at threshold $c$. The derivation was then checked against the sources
+  (audit/mu/bridge-source-audit.md and bridge-source-addendum.md: Prop. 2.10
+  covers formal arcs and intersections of boundary divisors; the maximal
+  projective wonderful model of De Concini–Procesi has a divisor for every
+  nonempty proper flat, per Feichtner Thm. 2.5 and Secs. 4.1–4.2 and
+  Feichtner–Sturmfels Prop. 3.6, Thm. 4.1; DP1 itself was not reopened). The
+  paper now states that Theorem 2.1 is a consequence of the principle, gives
+  the derivation and a direct proof, and claims no priority.
 - **Next-coefficient conditions.** Adrovic and Verschelde (CASC 2013,
   Sec. 5.1) test for the second term of a Puiseux series from a regular
   isolated root of the initial system. The scalars $\kappa,\mu$ are explicit
@@ -46,3 +50,15 @@ hits".
 - Primary texts of Björck–Saffari (1995) and Backelin (1989); their
   bibliographic data agree across four citing sources.
 - The fast-follow scan must be repeated within 7 days before any tag.
+
+## Pre-freeze fast-follow scan, 2026-10-26
+
+| Source | Query | Result |
+|---|---|---|
+| GitHub (control) | `gh search repos butson` | acprk/butson-hadamard-prime-once present (PASS) |
+| GitHub repos | cyclic n-roots; bjorck saffari; biunimodular; cyclic roots fourier | 0, 0, 1 (brackxm/even-biunimodular-lean, known; last commit a Lean upgrade), 0 |
+| GitHub code | `cyclic n-roots valuation`; `Bjorck Saffari` (separate terms) | word-match noise only; the openai/math hits are p-adic section-conjecture and lattice preprints |
+| Zenodo | "cyclic n-roots"; biunimodular; "Bjorck-Saffari"; CAZAC | 1 (known), 1 (known), 0, 27 (none on topic) |
+| arXiv API, newest first | "cyclic n-roots"; biunimodular; CAZAC; "complex Hadamard" AND circulant; "master function" AND "critical points" | newest on-topic item is Zhou (2026-08-06); nothing new on topic. The API's coverage of the last two days is not guaranteed. |
+
+Raw outputs: build/scan/ (not tracked). Repeat within 7 days of any tag.

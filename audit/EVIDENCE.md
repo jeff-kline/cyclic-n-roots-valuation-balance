@@ -17,7 +17,12 @@ unchanged under `audit/draft-records/` and `audit/draft-reviews/` as process
 evidence. Their "local draft" and "no release authorized" statements describe
 the draft before this repository existed.
 
-Origin of the results, as recorded by the two workstreams:
+Two AI systems, ChatGPT/Codex and Claude, worked on the same program in
+parallel under Jeff Kline's direction, and ideas passed between them through
+him. The list below records where each artifact was first recorded; it does
+not assign authorship of individual results.
+
+Where the artifacts were first recorded:
 
 - Valuation multiset lemma, every-gap complementarity, the local scalar
   reduction, the order-26 support, the split-prime witness and the residual
@@ -39,3 +44,21 @@ Records of the Claude workstream (not copied; hashes on 2026-10-26):
 
 All AI reviews are process evidence, not peer review, and agreement between
 AI systems is not independent validation.
+
+## Bridge and mu follow-up (imported 2026-10-26)
+
+The bridge derivation (Sattelberger–van der Veer Prop. 2.10 on the maximal
+wonderful model) and the mu certificate were prepared in the ChatGPT/Codex
+workspace `~/Documents/hm-ai/quarantine/bjorck-saffari-chatgpt-2026-10-25/bridge-mu-2026-10-26/`
+and examined there by a same-provider two-stage examiner. Copied unchanged:
+`scripts/local_field.py`; `audit/packets/mu-cold-packet.md`; `audit/mu/*.md`
+(proof, source audits, run record, examiner reports, regroup record);
+`evidence/mu-certificate.imported.json` (the author's output). Adapted:
+`scripts/certify_mu.py` (reads `scripts/check_certificates.py`, writes
+`build/mu-certificate.json`, adds the script directory to `sys.path` for
+`python -I`). Source hashes are in `audit/imports.sha256`. The root's rerun
+(`evidence/mu-certificate.json`) agrees with the author's output in every
+field except CPU time, Python version and checker hash. A cross-provider
+cold check of the certificate is recorded in AUDIT_LEDGER.md. Home-directory
+and scratchpad paths were later redacted in three copied records (see the
+ledger); every other copied file is byte-identical to its source.

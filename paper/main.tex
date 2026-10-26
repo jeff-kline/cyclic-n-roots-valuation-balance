@@ -20,23 +20,25 @@
 \begin{abstract}
 In its usual complex form, the Bj\"orck--Saffari conjecture asks whether
 the cyclic $n$-roots are finite in number whenever $n$ is square-free. This
-is proved for prime $n$; among composite orders, the sources we read
+is proved for prime $n$; among composite square-free orders, the sources we read
 settle only $n=6$ and $n=10$, by computer algebra. Haagerup's prime-order proof starts from the fact that an infinite
 solution set yields disjoint supports in time and frequency, and Zhou showed
 that such supports exist at every composite order. We show that the Fourier
 equations force more. Along any Laurent-series solution, the multiset of
 coordinate valuations equals the multiset of valuations of its Fourier
-transform; we expect this to follow from a residue principle for master
+transform. This is a consequence of a residue principle for master
 functions, and we claim no priority for it. It gives exact complementary
-supports of equal size at every proper valuation gap. For a one-dimensional endpoint kernel and a nondegenerate
-projective normal critical point, we reduce local lifting to one analytic
-function and give its first two scalar conditions, $\kappa=0$ and $\mu=0$.
-At order $26$, one fixed support pair admits nondegenerate normal critical
-points with $\kappa\ne0$ and others with $\kappa=0$. An affine reflection
-forces the latter cancellation exactly. Thus the first scalar condition is
-nonautomatic but cannot exclude every endpoint. We prove no bound on the
-depth of the remaining conditions, no existence of a branch at these
-endpoints, and no finiteness theorem for any composite order.
+supports of equal size at every proper valuation gap. For a one-dimensional
+endpoint kernel and a nondegenerate projective normal critical point, we
+reduce local lifting to one analytic function and give its first two scalar
+conditions, $\kappa=0$ and $\mu=0$. At order $26$, one fixed support pair
+admits nondegenerate normal critical points with $\kappa\ne0$ and others with
+$\kappa=0$; an affine reflection forces the latter cancellation exactly. At
+two such points a rigorous $\pi$-adic computation shows $\mu\ne0$, so no
+solution branch leaves them in the prescribed directions. Thus $\kappa$ alone
+cannot exclude every endpoint, while $\mu$ excludes these. We prove no bound
+on the number of conditions needed in general, and no finiteness theorem for
+any composite order.
 \end{abstract}
 
 \section{The question and the contribution}
@@ -86,26 +88,35 @@ exists, starting from a regular isolated root of the initial system \cite[Sec.~5
 $\kappa$ and $\mu$ are compatibility conditions of this kind, written
 explicitly for nondegenerate normal critical points at a valuation gap. The
 order-$26$ example shows both nonvanishing and symmetry-forced vanishing of
-the first scalar. The reflection used there is, up to a scalar factor, a
+the first scalar; at two of the symmetric points a rigorous $\pi$-adic
+computation shows $\mu\ne0$, so no branch leaves them in the prescribed
+directions. The reflection used there is, up to a scalar factor, a
 composite of the shifts, modulations and dilations that F\"uhr and Rzeszotnik
 list for unimodular solutions \cite[Sec.~10.3]{FR}; the same formulas act on
 all solutions. The Fourier symmetries, master-function framework, and
 implicit-function method are not claimed as new.
 
-Theorem~\ref{thm:valuations} is closely related to a general residue
-principle: when a curve of critical points of a master function
-$\prod f_i^{\alpha_i}$ tends to a boundary divisor $E$ of a
-normal-crossings compactification, the weights satisfy
-$\sum_i\operatorname{ord}_E(f_i)\alpha_i=0$
-\cite[Prop.~2.10]{SvdV}. Applied to the $2n$ forms $x_i$ and $(Fx)_k$ with
-weights $+1$ on $(Fx)_k$ and $-1$ on $x_i$, on a wonderful compactification of their arrangement, this
-principle should give the equal counts at every threshold, and hence the
-theorem; we have not checked that derivation in detail and give a direct
-proof instead. We claim no priority for Theorem~\ref{thm:valuations}. Its
-use for cyclic $n$-roots, the exact supports at every gap, the scalars
-$\kappa,\mu$, and the order-$26$ example are what this note adds; a bounded
-search, recorded with the note, found none of them stated for cyclic
-$n$-roots.
+Theorem~\ref{thm:valuations} is a consequence of a general residue
+principle: when a formal curve of critical points of a master function
+$\prod f_i^{\alpha_i}$ tends to boundary divisors $E$ of a smooth
+simple normal-crossings compactification, the weights satisfy
+$\sum_i\operatorname{ord}_E(f_i)\alpha_i=0$ for each of them
+\cite[Prop.~2.10]{SvdV}. Apply it to the $2n$ forms $x_i$ and $(Fx)_k$, with
+weights $+1$ on $(Fx)_k$ and $-1$ on $x_i$ (total weight $0$, so the master
+function lives on projective space), on the maximal projective wonderful
+model of their arrangement \cite[\S\S3--4]{DP}; see also
+\cite[Thm.~2.5, \S\S4.1--4.2]{Fei} and, for its fan,
+\cite[Prop.~3.6, Thm.~4.1]{FS}. Its boundary divisors are indexed by the
+nonempty proper flats. Each set $\{\ell:\nu(\ell)>c\}$ is a flat, since a
+form in the span of forms of order $>c$ has order $>c$, and the solution
+curve meets its divisor, along which $\ell$ vanishes to order $1$ exactly when
+$\ell$ lies in the flat. The residue condition there says that the flat
+contains as many forms $(Fx)_k$ as forms $x_i$, which is the equality of the
+counts at threshold $c$. We give a direct proof below and claim no priority
+for Theorem~\ref{thm:valuations}. For cyclic $n$-roots, this note adds
+the exact supports at every gap, the scalars $\kappa,\mu$, and the order-$26$
+example; a bounded search, recorded with the note, found
+none of them stated for cyclic $n$-roots.
 
 \section{Valuations and every gap}
 Write $\nu(h)$ for the order of a nonzero Laurent series at $t=0$.
@@ -330,8 +341,9 @@ identities prove the support zeros.
 These supports and this $u$ admit algebraic nondegenerate projective
 critical points of \eqref{eq:psi} with $\kappa\ne0$. They also admit
 at least two distinct algebraic nondegenerate projective critical points with
-$\kappa=0$. No assertion about $\mu$ or actual solution branches is made
-at the latter points.
+$\kappa=0$. At two of the latter, $\mu\ne0$; hence no formal branch with
+boundary direction $u$ and first transverse direction $w$, in the sense of
+Theorem~\ref{thm:local}, leaves either of them.
 \end{theorem}
 
 \subsection{A point with \texorpdfstring{$\kappa\ne0$}{nonzero kappa}}
@@ -434,8 +446,33 @@ Since $R$ preserves $L=1$, the equations, and each disc, uniqueness forces
 both lifts to be exactly $R$-fixed. Equation \eqref{eq:kappaodd} proves
 $\kappa=0$ exactly. As above, nonsingularity of the polynomial system
 makes both points algebraic over $K$. Embedding a common number field
-of definition into $\C$ in the same way gives two distinct complex endpoints. This proves
-Theorem~\ref{thm:26}.
+of definition into $\C$ in the same way gives two distinct complex endpoints.
+
+\subsection{The second scalar at the fixed lifts}
+At each of the two lifts, $\kappa=0$, so $\mu$ is defined by \eqref{eq:mu}.
+Normalize $u$ as above, $g=Gz$ in the chart $L(z)=1$, and $w_{20}=0$
+(allowed since $u_{20}\ne0$); solve $Ls=-h$ with $s_4=s_{20}=0$. This is
+possible because $\ker L=\operatorname{span}\{u,w\}$ and $u_4=0$ while $u_{20}w_4\ne0$,
+so evaluation at the coordinates $4,20$ is injective on $\ker L$.
+The accompanying program \texttt{certify\_mu.py} computes in
+$\Z_{13}[\pi,t]$ with $t^2=2$ modulo $\pi^{240}$, carrying for every
+quantity a valuation and a guaranteed absolute precision (conservative
+$\pi$-adic ball arithmetic, no floating point). Newton's method in the chart,
+started at $\bar z_\pm$, reaches gradient valuation $232$; since the
+Hessian is a unit on the whole residue disc, the exact Hensel lift lies within
+$O(\pi^{232})$ of the iterate, and all later quantities are computed on that
+enclosure. It finds
+\[
+ v_\pi(\mu_\pm)=-14,\qquad \pi^{14}\mu_\pm\equiv 11\pm8t\pmod{\pi},
+\]
+with absolute precision $193$; the residues have norm $6\ne0$ in
+$\F_{13}$. Thus $\mu\ne0$ at both lifts. Being nonzero is independent of
+the normalizations, by the scaling law after \eqref{eq:mu}, and is preserved
+by the embedding into $\C$, since $\mu$ is an algebraic number. By
+Theorem~\ref{thm:local}, $Q_{\rm eff}'(\tau)=-\mu\tau+O(\tau^2)$ is not
+identically zero, so no branch with the directions $u,w$ exists. This proves
+Theorem~\ref{thm:26}. It excludes neither other directions through these
+boundary points nor other strata.
 
 \section{What remains open}
 The multiset theorem supplies a necessary condition at every gap, without
@@ -446,20 +483,25 @@ with more than two valuation levels require separate treatment.
 
 Even in the nondegenerate case, $Q_{\rm eff}'\equiv0$ gives no bound
 on how many coefficients must be examined. The order-$26$ symmetry proves
-that testing $\kappa$ alone cannot exclude every endpoint. The value of
-$\mu$ at the two fixed points is not determined here. A uniform finiteness
+that testing $\kappa$ alone cannot exclude every endpoint; at the two
+certified points $\mu$ does exclude the prescribed branches. Whether some
+fixed number of coefficients always suffices is open. A uniform finiteness
 argument needs an additional theorem forcing some coefficient to be
 nonzero, with control over the endpoints and orders covered. The present
 results do not supply that theorem.
 
 \paragraph{Computational evidence and authorship.}
-The certificates use exact cyclotomic arithmetic and finite fields.
+The certificates use exact cyclotomic arithmetic, finite fields and
+conservative $\pi$-adic ball arithmetic.
 A finite-precision zero is not used to prove $\kappa=0$; symmetry and
 Hensel uniqueness prove that identity.
-AI systems helped find the results, attack and check the proofs, verify the
-certificates and draft the text, under the author's direction. AI is not an
-author or a referee, and AI review is not peer review. The author is
-responsible for the claims and their presentation.
+Two AI systems, ChatGPT/Codex (OpenAI) and Claude (Anthropic), worked on
+this program in parallel under the author's direction and contributed to
+finding the results, attacking and checking the proofs, verifying the
+certificates, searching prior work and drafting the text. AI is not an author
+or a referee, AI review is not peer review, and agreement between AI systems
+is not independent validation. The author is responsible for the claims and
+their presentation.
 
 \begin{thebibliography}{9}
 \bibitem{AV} D. Adrovic and J. Verschelde,
@@ -476,6 +518,17 @@ C. R. Acad. Sci. Paris S\'er.~I Math. \textbf{320} (1995), 319--324.
 \emph{Critical points and resonance of hyperplane arrangements},
 Canadian Journal of Mathematics \textbf{63} (2011), 1038--1057,
 \url{https://doi.org/10.4153/CJM-2011-028-8}.
+\bibitem{DP} C. De Concini and C. Procesi,
+\emph{Wonderful models of subspace arrangements},
+Selecta Math. (N.S.) \textbf{1} (1995), 459--494,
+\url{https://doi.org/10.1007/BF01589496}.
+\bibitem{Fei} E. M. Feichtner,
+\emph{De Concini--Procesi wonderful arrangement models: a discrete
+geometer's point of view},
+\url{https://arxiv.org/abs/math/0403183}.
+\bibitem{FS} E. M. Feichtner and B. Sturmfels,
+\emph{Matroid polytopes, nested sets and Bergman fans},
+\url{https://arxiv.org/abs/math/0411260}.
 \bibitem{FR} H. F\"uhr and Z. Rzeszotnik,
 \emph{On biunimodular vectors for unitary matrices},
 Linear Algebra Appl. \textbf{484} (2015), 86--129, \url{https://doi.org/10.1016/j.laa.2015.06.019}; arXiv:1506.06738.
