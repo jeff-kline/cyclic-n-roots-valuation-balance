@@ -1,6 +1,6 @@
 # Admission record
 
-State: DRAFT, local candidate prepared (version 0.1.0). No admission verdict.
+State: NOT YET ADMITTED. DRAFT, local candidate prepared (version 0.1.0).
 No remote, tag, archive or DOI. Admission, when granted, is a project release
 decision under the
 [public research standard](https://jeff-kline.github.io/posts/research-program/index.html),

@@ -15,7 +15,9 @@ in the source; the hashes of `paper/main.tex` (20ae9081…) and
 draft's own reviews. The draft's status records and reviews are kept
 unchanged under `audit/draft-records/` and `audit/draft-reviews/` as process
 evidence. Their "local draft" and "no release authorized" statements describe
-the draft before this repository existed.
+the draft before this repository existed. The draft README is stored as
+`audit/draft-records/README.md.txt` (bytes unchanged) so its relative links
+are not read as links of this repository.
 
 Two AI systems, ChatGPT/Codex and Claude, worked on the same program in
 parallel under Jeff Kline's direction, and ideas passed between them through
