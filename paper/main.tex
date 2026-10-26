@@ -1,0 +1,493 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={Valuation balance and local lifting for cyclic n-roots},pdfauthor={Jeff Kline}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\newcommand{\C}{\mathbb C}\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}\newcommand{\Z}{\mathbb Z}
+\title{Valuation balance and local lifting for cyclic \texorpdfstring{$n$}{n}-roots}
+\author{Jeff Kline}
+\date{Draft of version 0.1.0 --- October 26, 2026 --- not released}
+\begin{document}
+\maketitle
+\begin{abstract}
+In its usual complex form, the Bj\"orck--Saffari conjecture asks whether
+the cyclic $n$-roots are finite in number whenever $n$ is square-free. This
+is proved for prime $n$; among composite orders, the sources we read
+settle only $n=6$ and $n=10$, by computer algebra. Haagerup's prime-order proof starts from the fact that an infinite
+solution set yields disjoint supports in time and frequency, and Zhou showed
+that such supports exist at every composite order. We show that the Fourier
+equations force more. Along any Laurent-series solution, the multiset of
+coordinate valuations equals the multiset of valuations of its Fourier
+transform; we expect this to follow from a residue principle for master
+functions, and we claim no priority for it. It gives exact complementary
+supports of equal size at every proper valuation gap. For a one-dimensional endpoint kernel and a nondegenerate
+projective normal critical point, we reduce local lifting to one analytic
+function and give its first two scalar conditions, $\kappa=0$ and $\mu=0$.
+At order $26$, one fixed support pair admits nondegenerate normal critical
+points with $\kappa\ne0$ and others with $\kappa=0$. An affine reflection
+forces the latter cancellation exactly. Thus the first scalar condition is
+nonautomatic but cannot exclude every endpoint. We prove no bound on the
+depth of the remaining conditions, no existence of a branch at these
+endpoints, and no finiteness theorem for any composite order.
+\end{abstract}
+
+\section{The question and the contribution}
+A cyclic $n$-root is a vector $a\in\C^n$ satisfying
+\[
+ \sum_{j=0}^{n-1}a_j a_{j+1}\cdots a_{j+r-1}=0\quad(1\le r<n),
+ \qquad \prod_{j=0}^{n-1}a_j=1,
+\]
+with indices modulo $n$. If $m^2$ divides $n$ for some $m>1$, there are
+infinitely many cyclic $n$-roots (Backelin \cite{Backelin}; Bj\"orck and
+Saffari for the unimodular solutions \cite{BS95}). Bj\"orck and Saffari
+conjectured that for square-free $n$ the unimodular solutions with leading
+entry $1$ are finite in number \cite[Conj.~1.1]{FR}; the form for all complex
+solutions is the standard restatement \cite{Zhou}. Haagerup proved
+finiteness, and a count with multiplicity, for prime order \cite{Haagerup}.
+For composite square-free orders, the sources we read establish finiteness
+only for $n=6$ and $n=10$, by Gr\"obner-basis computation; at $n=14$ a count
+of isolated roots is reported, but finiteness is not established there
+(see the table and its footnote in \cite{FR}). The question for $2p$, with $p$ an arbitrary
+odd prime, motivates this note but is not resolved here.
+
+Put $\zeta=e^{2\pi i/n}$ and $F=(\zeta^{ij})_{0\le i,j<n}$.
+We use the unnormalized Fourier matrix, bilinear transpose, and
+coordinatewise reciprocals. Work where all coordinates of $x$ and
+$f=Fx$ are nonzero. The equations are
+\begin{equation}\label{eq:critical}
+ E(x):=F(Fx)^{-1}-x^{-1}=0.
+\end{equation}
+After fixing $x_0=1$, these are the Fourier equations for cyclic roots:
+set $a_j=x_{j+1}/x_j$. Indeed, $F^{-1}(x^{-1})=(Fx)^{-1}$ says that
+the cyclic correlations $\sum_j x_{j+r}/x_j$ vanish for $r\ne0$.
+This correspondence is credited to the existing literature,
+particularly \cite{Haagerup}.
+
+Haagerup's limiting-support argument produces disjoint supports in time
+and frequency from an infinite solution set. Zhou proves that such pairs
+exist for every composite order \cite{Zhou}. Our valuation statement
+retains multiplicities and all the gaps, yielding exact complements of
+equal size. These conditions are necessary, not sufficient for a branch.
+
+We then express the normal equations at a boundary point as the critical
+equations for a product of linear forms. Such master functions are standard;
+see \cite{CDFV}. An implicit-function reduction supplies the concrete scalars
+$\kappa,\mu$. Puiseux expansions of cyclic $n$-roots were computed earlier
+from initial forms by Adrovic and Verschelde, who test whether a second term
+exists, starting from a regular isolated root of the initial system \cite[Sec.~5.1]{AV};
+$\kappa$ and $\mu$ are compatibility conditions of this kind, written
+explicitly for nondegenerate normal critical points at a valuation gap. The
+order-$26$ example shows both nonvanishing and symmetry-forced vanishing of
+the first scalar. The reflection used there is, up to a scalar factor, a
+composite of the shifts, modulations and dilations that F\"uhr and Rzeszotnik
+list for unimodular solutions \cite[Sec.~10.3]{FR}; the same formulas act on
+all solutions. The Fourier symmetries, master-function framework, and
+implicit-function method are not claimed as new.
+
+Theorem~\ref{thm:valuations} is closely related to a general residue
+principle: when a curve of critical points of a master function
+$\prod f_i^{\alpha_i}$ tends to a boundary divisor $E$ of a
+normal-crossings compactification, the weights satisfy
+$\sum_i\operatorname{ord}_E(f_i)\alpha_i=0$
+\cite[Prop.~2.10]{SvdV}. Applied to the $2n$ forms $x_i$ and $(Fx)_k$ with
+weights $+1$ on $(Fx)_k$ and $-1$ on $x_i$, on a wonderful compactification of their arrangement, this
+principle should give the equal counts at every threshold, and hence the
+theorem; we have not checked that derivation in detail and give a direct
+proof instead. We claim no priority for Theorem~\ref{thm:valuations}. Its
+use for cyclic $n$-roots, the exact supports at every gap, the scalars
+$\kappa,\mu$, and the order-$26$ example are what this note adds; a bounded
+search, recorded with the note, found none of them stated for cyclic
+$n$-roots.
+
+\section{Valuations and every gap}
+Write $\nu(h)$ for the order of a nonzero Laurent series at $t=0$.
+The next result uses symmetry and invertibility rather than Fourier entries.
+
+\begin{theorem}[Valuation multiset]\label{thm:valuations}
+Let $F$ be an invertible symmetric constant matrix over $\C$. Suppose
+$x\in\C((t))^n$ satisfies \eqref{eq:critical} and all coordinates of
+$x$ and $Fx$ are nonzero. Then
+\[
+ \{\nu(x_i):0\le i<n\}=\{\nu((Fx)_k):0\le k<n\}
+\]
+as multisets. This also holds for Puiseux series after a finite change
+of parameter.
+\end{theorem}
+\begin{proof}
+Let $D=t\,d/dt$, $y=x^{-1}$, and $f=Fx$. Since $F^{-1}y=f^{-1}$,
+for every integer $r\ge1$ we have
+\[
+ \sum_k\frac{D^rf_k}{f_k}
+ =(FD^rx)^TF^{-1}y=(D^rx)^Ty
+ =\sum_i\frac{D^rx_i}{x_i}.
+\]
+If $h=ct^a(1+O(t))$, then $D^rh/h=a^r+O(t)$. Constant terms give
+equal power sums of the valuation multisets. Newton's identities for the
+first $n$ sums determine a multiset of $n$ numbers. A common denominator
+of Puiseux exponents reduces that case to Laurent series.
+\end{proof}
+
+\begin{corollary}[Exact complementarity at every gap]\label{cor:gaps}
+Under Theorem~\ref{thm:valuations}, choose a real $c$ which is not a
+coordinate valuation, and put
+\[
+ I=\{i:\nu(x_i)<c\},\qquad J=\{k:\nu((Fx)_k)<c\}.
+\]
+If the cut is proper, then $0<|I|=|J|<n$, and constant vectors $u,v$ exist with
+\[
+ \supp u=I,\quad\supp(Fu)=J,\qquad
+ \supp v=I^c,\quad\supp(F^{-1}v)=J^c.
+\]
+\end{corollary}
+\begin{proof}
+The cardinalities follow from the multiset theorem. Each coefficient vector
+$x^{[r]}$ for $r<c$ is supported in $I$ with transform supported in $J$.
+There are finitely many such nonzero vectors. Every coordinate of $I$,
+and every transform coordinate of $J$, occurs in at least one.
+A generic constant linear combination has exactly those supports,
+since bad combinations form a finite union of proper hyperplanes.
+Apply the same argument to $y=x^{-1}$ and $F^{-1}y=f^{-1}$ at orders
+less than $-c$ to obtain the complements.
+\end{proof}
+
+\begin{remark}
+An infinite normalized cyclic-root variety contains an algebraic curve.
+On its smooth projective model a nonconstant coordinate has a pole.
+The Laurent expansion there, with $x_0=1$, has a nonconstant valuation
+vector and a proper gap. Thus the corollary gives necessary data for an
+infinite solution set, without asserting that arbitrary such data occur
+along a solution curve.
+\end{remark}
+
+\section{The normal equations and two scalar conditions}
+Continue with any invertible symmetric $F$. Fix $|I|=|J|=m$, put $q=n-m$,
+and suppose
+\begin{equation}\label{eq:endpoint}
+ \supp u=I,\quad\supp f=J,\quad f=Fu,\quad
+ A=F[J^c,I],\quad\rank A=m-1.
+\end{equation}
+The right kernel is the line $u_I$. Let the columns of $G\in\C^{q\times d}$
+span $\ker A^T$, where $d=q-m+1$. Set
+\[
+ V=F[I^c,J^c]G,\quad g_{J^c}=Gz,\quad g_J=0,\qquad v=Fg.
+\]
+Work where all entries of $Gz$ and $Vz=v_{I^c}$ are nonzero. Define
+\begin{equation}\label{eq:psi}
+ \Psi(z)=\sum_{k\in J^c}\log(Gz)_k-\sum_{i\in I^c}\log(Vz)_i.
+\end{equation}
+Only logarithmic derivatives are used. The equal factor counts make
+this a projective critical-point problem.
+
+\begin{proposition}\label{prop:normal}
+A vector $w$ with
+\begin{equation}\label{eq:w}
+ w_{I^c}=v_{I^c}^{-1},\qquad (Fw)_{J^c}=g_{J^c}^{-1}
+\end{equation}
+exists exactly when $\nabla\Psi(z)=0$, and is unique modulo $u$.
+Set
+\[
+ H=V^T\diag(v_{I^c}^{-2})V-G^T\diag(g_{J^c}^{-2})G,\qquad
+ L=\diag(v^2)-F\diag(g^2)F.
+\]
+At a critical point, $\dim\ker L=1+\dim\ker H$.
+If $\rank H=d-1$, then $\ker L=\operatorname{span}\{u,w\}$.
+\end{proposition}
+\begin{proof}
+Solving for $w_I$ is an $A$-system with complete left-kernel conditions
+$G^Tg^{-1}-V^Tv^{-1}=0$, precisely $\nabla\Psi=0$.
+Let $Nr=(r_{I^c},(Fr)_{J^c})$ and
+$D=\diag(v_{I^c}^2,-g_{J^c}^2)$. Then $L=N^TDN$, $\ker N=\C u$.
+The columns of $\Lambda=(V^T,-G^T)^T$ span $\ker N^T$; their number is
+$2q-(n-1)=d$. Also $\Lambda^TD^{-1}\Lambda=H$.
+Indeed $\dim\ker N^T=2q-\rank N=2q-(n-1)=d$, and the $d$ columns of
+$\Lambda$ are independent because those of $G$ are.
+Now $Lr=0$ means $DNr=\Lambda b$. Such $r$ exists exactly when $Hb=0$,
+and is unique modulo $u$. Finally $Lu=0$, and \eqref{eq:w} gives
+$DNw=(v_{I^c},-g_{J^c})=\Lambda z$, so $Lw=N^T\Lambda z=0$; $u,w$ are
+independent since $w$ is nonzero on $I^c$.
+\end{proof}
+
+Fix a critical point $z$ of $\Psi$ and assume projective nondegeneracy:
+$\rank H=d-1$. Put
+\begin{equation}\label{eq:kappa}
+ h=F(1/f\text{ on }J)-(1/u\text{ on }I),\qquad\kappa=w^Th,
+\end{equation}
+with zero entries elsewhere. Since $u^Th=|J|-|I|=0$, $\kappa$ is
+independent of the choice of $w$. Symmetry of $L$ gives
+\begin{equation}\label{eq:solvable}
+ Ls=-h\text{ is solvable}\quad\Longleftrightarrow\quad\kappa=0.
+\end{equation}
+When this holds, define
+\begin{equation}\label{eq:mu}
+ \mu=\sum_{j\in J}\left(\frac{(Fw)_j}{f_j}\right)^2
+       -\sum_{i\in I}\left(\frac{w_i}{u_i}\right)^2+s^TLs.
+\end{equation}
+Changing $s$ by $\ker L$ has no effect. Replacing $w$ by $w+cu$ changes
+the two sums by $2c\kappa+c^2(|J|-|I|)=0$.
+Under $u\mapsto au$, $g\mapsto bg$, we have
+$\kappa\mapsto(ab)^{-1}\kappa$ and, when defined,
+$\mu\mapsto(ab)^{-2}\mu$. Their vanishing is independent of scale.
+
+\begin{theorem}[Local scalar reduction]\label{thm:local}
+At such a critical point, under \eqref{eq:endpoint}, the nonzero-coordinate
+conditions, and projective nondegeneracy, there is a convergent effective function
+$Q_{\rm eff}(\tau)$ with $Q_{\rm eff}'(0)=\kappa$. If $\kappa=0$, then
+\[
+ Q_{\rm eff}'(\tau)=-\mu\tau+O(\tau^2).
+\]
+A formal branch with boundary direction $u$ and first transverse direction
+$w$ exists exactly when $Q_{\rm eff}'\equiv0$. Here such a branch is a
+solution $x(t)$ of \eqref{eq:critical} over $\C((t))$, with all
+coordinates of $x$ and $Fx$ nonzero, which after multiplication by a
+scalar series satisfies $\ell_u(x)=1$ and $x=u+\tau(t)w+\xi(t)$, where
+$\ell_u,\ell_w,T$ are as in the proof, $\xi\in T[[t]]$, $\tau\in t\C[[t]]$
+is nonzero, and $\nu(\xi)>\nu(\tau)$.
+\end{theorem}
+\begin{proof}
+Choose linear forms $\ell_u,\ell_w$ dual to $u,w$ on their span and put
+$T=\ker\ell_u\cap\ker\ell_w$. In the slice $\ell_u(x)=1$, write
+$x=u+\tau(w+\eta)$, $\eta\in T$. The rational function
+$\mathcal R(x)=\prod_k(Fx)_k/\prod_i x_i$ has logarithmic gradient $E(x)$.
+Cancelling its $\tau^q$ factors gives, up to a constant, the logarithm
+\begin{align*}
+ Q(\tau,\eta)&=Q_N(\eta)+Q_R(\tau,\eta),\\
+ Q_N&=\sum_{j\in J^c}\log\left(1+\frac{(F\eta)_j}{(Fw)_j}\right)
+       -\sum_{i\in I^c}\log\left(1+\frac{\eta_i}{w_i}\right),\\
+ Q_R&=\sum_{j\in J}\log\left(1+\tau\frac{(Fw+F\eta)_j}{f_j}\right)
+       -\sum_{i\in I}\log\left(1+\tau\frac{w_i+\eta_i}{u_i}\right).
+\end{align*}
+At $(0,0)$ the $\eta$-gradient is zero, by the normal system \eqref{eq:w},
+and its Hessian is $L|_T$.
+A vector in its radical pairs to zero with $T$ and with $u,w$, so lies
+in $\ker L\cap T=0$. The formal and analytic implicit-function theorems
+give the same unique $\eta(\tau)\in\tau T[[\tau]]$ with
+$\partial_\eta Q=0$. Define $Q_{\rm eff}(\tau)=Q(\tau,\eta(\tau))$.
+
+For $\tau\ne0$ these coordinates parametrize the slice near the specified
+direction. Homogeneity of $\mathcal R$ makes criticality on the slice
+equivalent to $E(x)=0$. Given a branch as in the statement, put
+$\eta_b=\xi/\tau\in tT[[t]]$, so that $x=u+\tau(w+\eta_b)$ and both
+partial derivatives of $Q$ vanish at $(\tau(t),\eta_b(t))$. Write
+$\partial_\eta Q(\tau,\eta)=L|_T\eta+\beta(\tau)+O(\tau\eta)+O(\eta^2)$ with
+$\beta(0)=0$. Since $\tau(t)\in t\C[[t]]$ and $L|_T$ is invertible, the
+coefficient of $t^k$ in $\partial_\eta Q(\tau(t),\eta(t))=0$ determines the
+$t^k$ coefficient of $\eta$ from the lower ones; so this equation has a
+unique solution in $tT[[t]]$, and $\eta_b=\eta\circ\tau$. Then
+$Q_{\rm eff}'(\tau(t))=\partial_\tau Q+\partial_\eta Q\cdot\eta'=0$, and a
+nonconstant $\tau(t)$ cannot annihilate a nonzero power series in $\tau$.
+A branch therefore implies
+$Q_{\rm eff}'\equiv0$. Conversely that identity supplies the convergent
+branch $u+\tau(w+\eta(\tau))$, with all required coordinates nonzero
+for small nonzero $\tau$.
+
+Differentiation gives $Q_\tau(0,0)=w^Th=\kappa$.
+If $\kappa=0$, let $s=\eta'(0)$. The transverse equation gives
+$(Ls+h)|_T=0$; it also vanishes on $u,w$, so $Ls=-h$. Finally,
+\[
+ Q_{\rm eff}''(0)=Q_{\tau\tau}+2h^Ts+s^TLs
+ =-\left\{\sum_J((Fw)_j/f_j)^2-\sum_I(w_i/u_i)^2+s^TLs\right\}=-\mu.
+\]
+This does not restrict intermediate powers in a Laurent parameter.
+\end{proof}
+
+\section{One order-26 support with opposite outcomes for \texorpdfstring{$\kappa$}{kappa}}
+Set $\omega=e^{2\pi i/13}$, $\zeta=-\omega^7$, and $K=\Q(\omega)$. Take
+\begin{align*}
+ I&=\{0,1,2,3,5,7,13,15,17,18,19,20\},\\
+ J&=\{3,9,13,14,15,16,18,20,22,23,24,25\},\\
+ B=J^c&=\{0,1,2,4,5,6,7,8,10,11,12,17,19,21\}.
+\end{align*}
+For $E=\{0,1,2,3,4,5,6\}$ and $O=\{2,3,4,7,9,10,12\}$, write
+\[
+ U(X)=\prod_{e\in E}(X-\omega^e)=\sum a_iX^i,\qquad
+ W(X)=\prod_{o\in O}(X+\omega^o)=\sum b_iX^i.
+\]
+Let $u$ be the length-$26$ coefficient vector of
+\[
+ b_1U(X)+a_1W(X)+X^{13}\{b_1U(X)-a_1W(X)\}.
+\]
+Exact arithmetic gives $\supp u=I$ and $\supp Fu=J$.
+Put $D_0=I\setminus\{20\}$, $T_0=\{17,19,21\}$, $C_0=B\setminus T_0$.
+The normal system uses
+\begin{equation}\label{eq:Gexplicit}
+ M=F[D_0,C_0],\qquad G_{T_0}=\mathrm{Id}_3,\qquad
+ G_{C_0}=-M^{-1}F[D_0,T_0].
+\end{equation}
+Under $\zeta\mapsto5215$ modulo $10037$, $\det M=3759$.
+Thus $\rank F[B,I]=11$, and $z=(g_{17},g_{19},g_{21})$ are free
+coordinates. The modular minor proves nonvanishing only; exact cyclotomic
+identities prove the support zeros.
+
+\begin{theorem}\label{thm:26}
+These supports and this $u$ admit algebraic nondegenerate projective
+critical points of \eqref{eq:psi} with $\kappa\ne0$. They also admit
+at least two distinct algebraic nondegenerate projective critical points with
+$\kappa=0$. No assertion about $\mu$ or actual solution branches is made
+at the latter points.
+\end{theorem}
+
+\subsection{A point with \texorpdfstring{$\kappa\ne0$}{nonzero kappa}}
+Reduce at the split prime $53$ with $\zeta\mapsto4$, $\omega\mapsto16$.
+At $z=(1,8,19)$, exact finite-field arithmetic gives
+\[
+ \nabla\Psi(z)=0,\qquad
+ H=\begin{pmatrix}6&47&5\\47&3&13\\5&13&11\end{pmatrix},\qquad\kappa=4.
+\]
+All $28$ denominators are nonzero, $\det M=46$, and the Hessian determinant
+on $z_0=1$ is $23$. Hensel's lemma gives a normal critical point over
+$\Q_{53}$ at which $\kappa$ is a unit. The cleared two-equation system has
+an invertible Jacobian, so the point is isolated and algebraic over $K$.
+Embed a number field of definition into $\C$ by an embedding extending
+$\omega\mapsto e^{2\pi i/13}$. This gives the required point, preserving the
+nonzero coordinates, the Hessian rank and $\kappa\ne0$. By \eqref{eq:kappaodd} below, $\kappa(u,Rz)=-\kappa(u,z)\ne0$. Since $\kappa$ scales as $\lambda^{-1}$ under $z\mapsto\lambda z$, $Rz$ could represent the same projective point only if $Rz=-z$, which forces $z_1=0$; but $z_1$ reduces to $8\ne0$ modulo $53$. So $Rz$ is a second such point.
+
+\subsection{A symmetry that makes \texorpdfstring{$\kappa$}{kappa} odd}
+Define monomial involutions, with indices modulo $26$, by
+\begin{equation}\label{eq:involutions}
+ (\mathcal Ux)_i=\zeta^{-10-12i}x_{20-i},\qquad
+ (\mathcal Sg)_k=\zeta^{-10-20k}g_{12-k}.
+\end{equation}
+Direct multiplication gives
+\begin{equation}\label{eq:intertwine}
+ \mathcal U^2=\mathcal S^2=1,\qquad
+ F\mathcal U=\mathcal S^{-T}F,\qquad
+ F\mathcal S=\mathcal U^{-T}F.
+\end{equation}
+The supports are preserved since $I=20-I$ and $J=12-J$.
+Substitution in the polynomial for $u$, in $\Z[\omega]$, gives
+\begin{equation}\label{eq:uodd}
+ \mathcal Uu=-u.
+\end{equation}
+Equivalently, $(\mathcal U_0x)_i=\zeta^{-12i}x_{20-i}$ acts on $u$
+by $-\zeta^{10}$. On the free coordinates, $\mathcal S$ induces
+\begin{equation}\label{eq:R}
+ R(z_0,z_1,z_2)=(\zeta^{14}z_2,z_1,\zeta^{12}z_0).
+\end{equation}
+The products in \eqref{eq:psi} are permuted and multiplied by constants,
+so $R$ preserves the critical locus. If $(u,g,w)$ satisfies \eqref{eq:w},
+then $(\mathcal Uu,\mathcal Sg,\mathcal Uw)$ does also. Moreover
+$h(\mathcal Uu)=\mathcal U^{-T}h(u)$, by \eqref{eq:intertwine}.
+Therefore $\kappa(\mathcal Uu,\mathcal Sg)=\kappa(u,g)$.
+Equation \eqref{eq:uodd} and scaling in $u$ imply
+\begin{equation}\label{eq:kappaodd}
+ \kappa(u,Rz)=-\kappa(u,z)
+\end{equation}
+on the normal critical locus. An exactly $R$-fixed representative has
+$\kappa=0$. Projective fixedness without control of scale would not alone
+justify that conclusion.
+
+\subsection{Two fixed Hensel lifts}
+Let $\pi=1-\omega$, with $\nu_\pi(\pi)=1$. The basis
+\eqref{eq:Gexplicit} is integral at $\pi$, with the free rows the identity.
+Divide each row of $G,V$ by its largest common power of $\pi$ and reduce.
+Up to nonzero row constants, the $G$ rows, in increasing $B$ order, are
+\begin{equation}\label{eq:rows}
+\begin{gathered}
+(1,4,7),(1,1,6),(1,3,9),(1,0,0),(1,7,4),(0,1,0),\\
+(1,5,10),(0,0,1),(1,9,3),(1,11,11),(1,8,2),\\
+(1,0,0),(0,1,0),(0,0,1).
+\end{gathered}
+\end{equation}
+All $G$ rows have valuation zero. Every normalized $V$ row is proportional
+to $\ell=(1,6,1)$; the row valuation is $4$ at the nine even indices
+of $I^c$ and $8$ at its five odd indices. The accompanying certificate
+program verifies these finite cyclotomic arithmetic statements. In particular,
+write each entry as $\sum_{j=0}^{11}c_j\pi^j$, $c_j\in\Q$. Its valuation is
+$\min_{c_j\ne0}(12v_{13}(c_j)+j)$: the term valuations are distinct modulo
+$12$, so the minimum cannot cancel. Initial units follow from
+$13/\pi^{12}\equiv-1\pmod\pi$. Thus these reductions can be checked in
+the exact number field, without a precision cutoff. They give
+the reduced logarithmic derivative of
+\[
+ \overline\Psi=\sum_{r\text{ in }\eqref{eq:rows}}\log(rz)
+                   -14\log(z_0+6z_1+z_2).
+\]
+In $\F_{169}=\F_{13}[t]/(t^2-2)$ take
+\[
+ \bar z_\pm=(9\pm4t,\ 8\pm3t,\ 9\pm4t).
+\]
+They lie on $\ell z=1$, all $28$ normalized forms are nonzero, and the
+gradient vanishes. On $z_2=1-z_0-6z_1$ the Hessian is
+\[
+ \begin{pmatrix}7\pm9t&8\pm t\\8\pm t&4\end{pmatrix},
+ \qquad \det=1\pm7t\ne0,
+\]
+whose norm to $\F_{13}$ is $7$.
+
+For the lift use the exactly $R$-invariant affine chart
+\[
+ L(z)=z_0+6z_1+\zeta^{14}z_2=1.
+\]
+This reduces to $\ell z=1$. On each residue disc the normalized
+denominators are units. Hensel's lemma therefore gives a unique critical
+lift on each disc in the unramified quadratic extension of $K_\pi$.
+The reduction of $R$ swaps $z_0,z_2$ and fixes both residual points.
+Since $R$ preserves $L=1$, the equations, and each disc, uniqueness forces
+both lifts to be exactly $R$-fixed. Equation \eqref{eq:kappaodd} proves
+$\kappa=0$ exactly. As above, nonsingularity of the polynomial system
+makes both points algebraic over $K$. Embedding a common number field
+of definition into $\C$ in the same way gives two distinct complex endpoints. This proves
+Theorem~\ref{thm:26}.
+
+\section{What remains open}
+The multiset theorem supplies a necessary condition at every gap, without
+classifying which support pairs can come from a single Laurent solution.
+The local reduction is exact under its rank and nondegeneracy hypotheses.
+Degenerate normal critical points, larger endpoint kernels, and branches
+with more than two valuation levels require separate treatment.
+
+Even in the nondegenerate case, $Q_{\rm eff}'\equiv0$ gives no bound
+on how many coefficients must be examined. The order-$26$ symmetry proves
+that testing $\kappa$ alone cannot exclude every endpoint. The value of
+$\mu$ at the two fixed points is not determined here. A uniform finiteness
+argument needs an additional theorem forcing some coefficient to be
+nonzero, with control over the endpoints and orders covered. The present
+results do not supply that theorem.
+
+\paragraph{Computational evidence and authorship.}
+The certificates use exact cyclotomic arithmetic and finite fields.
+A finite-precision zero is not used to prove $\kappa=0$; symmetry and
+Hensel uniqueness prove that identity.
+AI systems helped find the results, attack and check the proofs, verify the
+certificates and draft the text, under the author's direction. AI is not an
+author or a referee, and AI review is not peer review. The author is
+responsible for the claims and their presentation.
+
+\begin{thebibliography}{9}
+\bibitem{AV} D. Adrovic and J. Verschelde,
+\emph{Polyhedral methods for space curves exploiting symmetry applied to the
+cyclic $n$-roots problem}, in Computer Algebra in Scientific Computing (CASC 2013), Lecture Notes in Comput. Sci., Springer, 2013, 10--29, \url{https://doi.org/10.1007/978-3-319-02297-0_2}; arXiv:1109.0241.
+\bibitem{Backelin} J. Backelin,
+\emph{Square multiples $n$ give infinitely many cyclic $n$-roots},
+Reports, Matematiska Institutionen, Stockholms Universitet, no.~8 (1989).
+\bibitem{BS95} G. Bj\"orck and B. Saffari,
+\emph{New classes of finite unimodular sequences with unimodular Fourier
+transforms. Circulant Hadamard matrices with complex entries},
+C. R. Acad. Sci. Paris S\'er.~I Math. \textbf{320} (1995), 319--324.
+\bibitem{CDFV} D. Cohen, G. Denham, M. Falk, and A. Varchenko,
+\emph{Critical points and resonance of hyperplane arrangements},
+Canadian Journal of Mathematics \textbf{63} (2011), 1038--1057,
+\url{https://doi.org/10.4153/CJM-2011-028-8}.
+\bibitem{FR} H. F\"uhr and Z. Rzeszotnik,
+\emph{On biunimodular vectors for unitary matrices},
+Linear Algebra Appl. \textbf{484} (2015), 86--129, \url{https://doi.org/10.1016/j.laa.2015.06.019}; arXiv:1506.06738.
+\bibitem{Haagerup} U. Haagerup,
+\emph{Cyclic $p$-roots of prime length $p$ and related complex Hadamard matrices},
+arXiv:0803.2629 (2008), \url{https://arxiv.org/abs/0803.2629}.
+\bibitem{SvdV} A.-L. Sattelberger and R. van der Veer,
+\emph{Maximum likelihood estimation from a tropical and a Bernstein--Sato
+perspective}, Int. Math. Res. Not. IMRN \textbf{2023} (2023), no.~6,
+5263--5292, \url{https://doi.org/10.1093/imrn/rnac016}; arXiv:2101.03570.
+\bibitem{Zhou} W. Zhou,
+\emph{On number of cyclic $n$-roots and disjointness of Fourier supports},
+arXiv:2608.06335v2 (2026), \url{https://arxiv.org/abs/2608.06335v2}.
+\end{thebibliography}
+\end{document}

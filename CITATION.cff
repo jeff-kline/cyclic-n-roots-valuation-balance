@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Draft of version 0.1.0, not yet released. Cite a released version once one exists."
+type: article
+title: "Valuation balance and local lifting for cyclic n-roots"
+authors:
+  - family-names: Kline
+    given-names: Jeff
+version: 0.1.0
+repository-code: "https://github.com/jeff-kline/cyclic-n-roots-valuation-balance"
+license: GPL-3.0-only
+keywords:
+  - cyclic n-roots
+  - Björck-Saffari conjecture
+  - discrete Fourier transform
+  - Puiseux series
+  - complex Hadamard matrices
+abstract: >-
+  Along any Laurent-series solution of the Fourier form of the cyclic n-root
+  equations, the multiset of coordinate valuations equals the multiset of
+  valuations of the Fourier transform; this is expected to follow from a
+  known residue principle for master functions, and no priority is claimed
+  for it. It gives exact complementary supports of equal size in time and
+  frequency at every proper valuation gap. For a one-dimensional endpoint
+  kernel and a nondegenerate normal critical point, local lifting reduces to
+  one analytic function whose first two conditions are explicit scalars
+  kappa = 0 and mu = 0. At order 26 one support pair has boundary points with
+  kappa nonzero and at least two where an affine reflection forces kappa = 0
+  exactly. No finiteness theorem for a composite order is proved; mu at the
+  symmetric points, the number of coefficient conditions needed, and the
+  existence of branches are left open. Novelty is not established.
