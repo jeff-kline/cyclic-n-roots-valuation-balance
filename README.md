@@ -86,16 +86,19 @@ New for cyclic $n$-roots:
 
 Not new: the equality of the valuation multisets, which follows from
 Sattelberger and van der Veer's balance condition applied on the maximal
-"wonderful model" of the arrangement, De Concini and Procesi's name for the
-smooth compactification obtained by blowing up every intersection of the
-hyperplanes (the paper gives both this derivation and a direct proof); the
-second-term test of Adrovic and Verschelde, of which $\kappa$ and $\mu$ are
+wonderful model of the arrangement (the paper gives both this derivation and a
+direct proof); the second-term test of Adrovic and Verschelde, of which $\kappa$ and $\mu$ are
 conditions of the same kind; the Fourier form of the equations (Haagerup);
 the symmetries of the problem (Führ and Rzeszotnik); master functions of
 hyperplane arrangements (Cohen, Denham, Falk and Varchenko); and the
 implicit-function method. The note leaves open how many coefficient
 conditions can be needed in general, branches in other directions, and the
 cases of degenerate points and larger kernels.
+
+"Wonderful model" is a technical term, not a judgment: it is De Concini and
+Procesi's name for the smooth compactification of an arrangement complement
+obtained by blowing up intersections of the hyperplanes. "Maximal" means that
+every intersection is blown up.
 
 A bounded search, logged in [audit/PRIOR_WORK.md](audit/PRIOR_WORK.md), found
 the general results above but none of the three items stated for cyclic
