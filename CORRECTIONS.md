@@ -17,5 +17,5 @@ both backward to their predecessors and forward to the replacement.
 
 ## 0.1.0 preparation — October 26, 2026 UTC
 
-Local draft only; no publication date, tag, archive, or DOI exists.
+Release candidate; no tag, archive, or DOI exists yet.
 Changes from the imported draft are listed in AUDIT_LEDGER.md.
