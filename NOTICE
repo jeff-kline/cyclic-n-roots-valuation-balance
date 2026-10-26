@@ -3,7 +3,7 @@ Original paper, TeX source, prose, and scripts are licensed under GPL-3.0-only.
 The full GNU General Public License version 3 is in LICENSE, copied unchanged
 from the planar-steiner-diversities-log-distortion predecessor.
 
-Draft of version 0.1.0, October 26, 2026. Not released; not peer reviewed.
+Version 0.1.0, admitted October 26, 2026. Not peer reviewed.
 The paper, checker and certificate output were imported from a local
 AI-assisted draft prepared under the author's direction; see audit/EVIDENCE.md
 for source paths and hashes. The build and README-check scripts are adapted

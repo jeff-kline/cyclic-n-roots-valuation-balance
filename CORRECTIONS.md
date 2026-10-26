@@ -1,6 +1,6 @@
 # Corrections and version history
 
-Draft of version 0.1.0, October 26, 2026. Not released; not peer reviewed.
+Version 0.1.0, admitted October 26, 2026. Not peer reviewed.
 
 Report suspected errors through the repository issue tracker.
 Jeff Kline is responsible for assessing reports and maintaining this record.
@@ -19,3 +19,11 @@ both backward to their predecessors and forward to the replacement.
 
 Release candidate; no tag, archive, or DOI exists yet.
 Changes from the imported draft are listed in AUDIT_LEDGER.md.
+
+## 0.1.0 release — October 26, 2026 UTC
+
+Tagged v0.1.0 at 8eb57658c870518de2e2985a843551af6991d4f7 and archived at
+version DOI 10.5281/zenodo.23669925. The tag keeps its candidate wording ("NOT YET ADMITTED"); the
+living README, CITATION.cff, paper title block and ADMISSION.md record the
+admission. The paper's only post-tag change is the title-block status and DOI
+line. No correction has been reported.

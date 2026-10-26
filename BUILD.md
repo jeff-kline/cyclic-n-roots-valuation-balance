@@ -1,6 +1,6 @@
 # Build and verification
 
-Draft of version 0.1.0, October 26, 2026. Not released; not peer reviewed.
+Version 0.1.0, admitted October 26, 2026. Not peer reviewed.
 
 The certificate checker needs Python 3 with SymPy 1.14.0 and mpmath 1.3.0
 (`requirements.txt`). It refuses to run outside a virtual environment or with

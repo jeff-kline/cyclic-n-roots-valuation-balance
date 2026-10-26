@@ -1,6 +1,6 @@
 # Audit ledger
 
-Draft of version 0.1.0. Not released. Reviews are AI process evidence, not
+Version 0.1.0, admitted October 26, 2026. Reviews are AI process evidence, not
 peer review, and agreement between AI systems is not independent validation.
 
 ## Reviews

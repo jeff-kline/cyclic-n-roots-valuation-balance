@@ -1,13 +1,16 @@
 # Release maintenance
 
-Draft of version 0.1.0 (October 26, 2026). Not released. Read ADMISSION.md,
-AUDIT_LEDGER.md, BUILD.md and audit/PRIOR_WORK.md before edits.
+Version 0.1.0 was admitted on October 26, 2026 (version DOI
+10.5281/zenodo.23669925). Read ADMISSION.md, AUDIT_LEDGER.md, BUILD.md and
+audit/PRIOR_WORK.md before edits.
 
 Root owns edits, claim scope, audit dispositions and release decisions.
 Auditors are read-only unless explicitly assigned an editing lane.
 Email is globally prohibited; never use email tools or seek email access.
-No push, remote, tag, release, archive or site change without exact author
+No public push, tag, release, archive or site change without exact author
 authorization. The Zenodo portal belongs to the author.
+Never move or rewrite the public tag v0.1.0; corrections follow CORRECTIONS.md
+and receive a new version.
 
 The imported draft's source workspace is read-only. Material mathematical
 changes reopen the affected audit. Never infer global novelty from a bounded

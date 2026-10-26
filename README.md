@@ -1,10 +1,15 @@
 # Valuation balance and local lifting for cyclic n-roots
 
-**Status: draft of version 0.1.0, October 26, 2026. Not released.** There is
-no tag, archive or DOI yet. Release under the
+[![Version DOI: 10.5281/zenodo.23669925](https://zenodo.org/badge/DOI/10.5281/zenodo.23669925.svg)](https://doi.org/10.5281/zenodo.23669925)
+
+**Status: version 0.1.0 admitted October 26, 2026.** The immutable release is
+[v0.1.0](https://github.com/jeff-kline/cyclic-n-roots-valuation-balance/releases/tag/v0.1.0),
+archived at version DOI [10.5281/zenodo.23669925](https://doi.org/10.5281/zenodo.23669925). The concept DOI
+[10.5281/zenodo.23669924](https://doi.org/10.5281/zenodo.23669924) resolves to the latest version; cite the
+version DOI for reproducibility. Admission under the
 [public research standard](https://jeff-kline.github.io/posts/research-program/index.html)
-is a project decision, not peer review or a correctness certificate; see
-[ADMISSION.md](ADMISSION.md) for the open gates.
+is a project release decision, not peer review or a correctness certificate;
+see [ADMISSION.md](ADMISSION.md).
 
 A cyclic $n$-root is a vector $a\in\mathbb{C}^n$ whose cyclic products of
 every length $r<n$ sum to zero and whose full product is 1. Björck and Saffari
@@ -185,9 +190,9 @@ their presentation.
 
 ## Citation and status
 
-Jeff Kline. *Valuation balance and local lifting for cyclic n-roots*. Draft of
-version 0.1.0, October 26, 2026. Not yet released; see
-[CITATION.cff](CITATION.cff).
+Jeff Kline. *Valuation balance and local lifting for cyclic n-roots*.
+Version 0.1.0, October 26, 2026. [doi:10.5281/zenodo.23669925](https://doi.org/10.5281/zenodo.23669925).
+See [CITATION.cff](CITATION.cff).
 
 ## License
 

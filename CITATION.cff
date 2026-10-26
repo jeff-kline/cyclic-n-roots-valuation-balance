@@ -6,6 +6,15 @@ authors:
   - family-names: Kline
     given-names: Jeff
 version: 0.1.0
+doi: 10.5281/zenodo.23669925
+date-released: 2026-10-26
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23669925
+    description: "Version DOI for version 0.1.0"
+  - type: doi
+    value: 10.5281/zenodo.23669924
+    description: "Concept DOI; resolves to the latest version"
 repository-code: "https://github.com/jeff-kline/cyclic-n-roots-valuation-balance"
 license: GPL-3.0-only
 keywords:
