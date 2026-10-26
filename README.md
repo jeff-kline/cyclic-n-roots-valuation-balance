@@ -85,9 +85,10 @@ New for cyclic $n$-roots:
   and transverse directions; other directions and strata are not excluded.
 
 Not new: the equality of the valuation multisets, which follows from
-Sattelberger and van der Veer's balance condition on the maximal wonderful
-model of the arrangement (De Concini and Procesi; the paper gives both this
-derivation and a direct proof); the
+Sattelberger and van der Veer's balance condition applied on the maximal
+"wonderful model" of the arrangement, De Concini and Procesi's name for the
+smooth compactification obtained by blowing up every intersection of the
+hyperplanes (the paper gives both this derivation and a direct proof); the
 second-term test of Adrovic and Verschelde, of which $\kappa$ and $\mu$ are
 conditions of the same kind; the Fourier form of the equations (Haagerup);
 the symmetries of the problem (Führ and Rzeszotnik); master functions of
